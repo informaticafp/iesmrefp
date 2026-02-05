@@ -1,4 +1,4 @@
-const BASE = "/iesmre"; // nombre del repo en GitHub Pages
+const BASE = "/"; // nombre del repo en GitHub Pages
 
 async function loadPartial(id, url) {
   const el = document.getElementById(id);
