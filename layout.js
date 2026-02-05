@@ -1,4 +1,4 @@
-const BASE = "/"; // nombre del repo en GitHub Pages
+const BASE = "/iesmrefp"; // nombre del repo en GitHub Pages
 
 async function loadPartial(id, url) {
   const el = document.getElementById(id);
@@ -12,5 +12,5 @@ async function loadPartial(id, url) {
   el.innerHTML = await res.text();
 }
 
-loadPartial("site-header", `/partials/header.html`);
-loadPartial("site-footer", `/partials/footer.html`);
+loadPartial("site-header", `${BASE}/partials/header.html`);
+loadPartial("site-footer", `${BASE}/partials/footer.html`);
