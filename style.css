@@ -190,24 +190,24 @@ body::before{
 }
 
 /* Colores */
-.t1{ background: linear-gradient(135deg, #f4a169, #e77d36); animation-delay: 500ms; }
-.t2{ background: linear-gradient(135deg, #e77d36, #f4a169); animation-delay: 1000ms; }
-.t3{ background: linear-gradient(135deg, #7dcef3, #1599d6); animation-delay: 1500ms; }
-.t4{ background: linear-gradient(135deg, #1599d6, #7dcef3); animation-delay: 2000ms; }
+.t1{ background: linear-gradient(135deg, #f4a169, #df6f24); animation-delay: 500ms; }
+.t2{ background: linear-gradient(135deg, #df6f24, #f4a169); animation-delay: 1000ms; }
+.t3{ background: linear-gradient(135deg, #7dcef3, #108dc7); animation-delay: 1500ms; }
+.t4{ background: linear-gradient(135deg, #108dc7, #7dcef3); animation-delay: 2000ms; }
 
-.tprg{ background: linear-gradient(135deg, #ef5552, #eb2024); animation-delay: 500ms; }
-.tbd{ background: linear-gradient(135deg, #8bc34b, #679138); animation-delay: 1000ms; }
-.tllm{ background: linear-gradient(135deg, #69ba6b, #38813b); animation-delay: 1500ms; }
-.ted{ background: linear-gradient(135deg, rgba(123, 133, 126, 0.15), rgba(181, 187, 183, 0.5)); animation-delay: 2000ms; }
-.tpi1{ background: linear-gradient(135deg, rgba(123, 133, 126, 0.15), rgba(181, 187, 183, 0.5)); animation-delay: 2500ms; }
-.tipo1{ background: linear-gradient(135deg, rgba(123, 133, 126, 0.15), rgba(181, 187, 183, 0.5)); animation-delay: 3000ms; }
+.tprg{ background: linear-gradient(135deg, #f0615e, #e4181c); animation-delay: 500ms; }
+.tbd{ background: linear-gradient(135deg, #9dca69, #608a31); animation-delay: 1000ms; }
+.tllm{ background: linear-gradient(135deg, #6eb96f, #378b3a); animation-delay: 1500ms; }
+.ted{ background: linear-gradient(135deg, rgba(126, 131, 128, 0.15), rgba(181, 187, 183, 0.15)); animation-delay: 2000ms; }
+.tpi1{ background: linear-gradient(135deg, rgba(126, 131, 128, 0.15) rgba(181, 187, 183, 0.15)); animation-delay: 2500ms; }
+.tipo1{ background: linear-gradient(135deg, rgba(126, 131, 128, 0.15), rgba(181, 187, 183, 0.15)); animation-delay: 3000ms; }
 
-.tdwec{ background: linear-gradient(135deg, #2094f3, #12558a); animation-delay: 500ms; }
-.tdwes{ background: linear-gradient(135deg, #ffc105, #d4b34d); animation-delay: 1000ms; }
-.tdaw{ background: linear-gradient(135deg, rgba(123, 133, 126, 0.15), rgba(181, 187, 183, 0.5)); animation-delay: 1500ms; }
-.tdiw{ background: linear-gradient(135deg, rgba(123, 133, 126, 0.15), rgba(181, 187, 183, 0.5)); animation-delay: 2000ms; }
-.tpi2{ background: linear-gradient(135deg, rgba(123, 133, 126, 0.15), rgba(181, 187, 183, 0.5)); animation-delay: 2500ms; }
-.tipo2{ background: linear-gradient(135deg, rgba(123, 133, 126, 0.15), rgba(181, 187, 183, 0.5)); animation-delay: 3000ms; }
+.tdwec{ background: linear-gradient(135deg, #5faceb, #0a5491); animation-delay: 500ms; }
+.tdwes{ background: linear-gradient(135deg, #cca328, #f1d170); animation-delay: 1000ms; }
+.tdaw{ background: linear-gradient(135deg, rgba(126, 131, 128, 0.15), rgba(181, 187, 183, 0.15)); animation-delay: 1500ms; }
+.tdiw{ background: linear-gradient(135deg, rgba(126, 131, 128, 0.15), rgba(181, 187, 183, 0.15)); animation-delay: 2000ms; }
+.tpi2{ background: linear-gradient(135deg, rgba(126, 131, 128, 0.15), rgba(181, 187, 183, 0.15)); animation-delay: 2500ms; }
+.tipo2{ background: linear-gradient(135deg, rgba(126, 131, 128, 0.15), rgba(181, 187, 183, 0.15)); animation-delay: 3000ms; }
 
 @keyframes appear{
   to{
@@ -258,6 +258,35 @@ body::before{
 .footer a:focus{
   text-decoration: underline;
 }
+
+.btn-back{
+  position: fixed;
+  top: 16px;
+  right: 16px;      /* ← aquí está la clave */
+  left: auto;
+
+  z-index: 1000;
+
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  color: #fff;
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.2);
+
+  transition: background .2s ease, transform .2s ease;
+}
+
+.btn-back:hover{
+  background: rgba(255,255,255,.22);
+  transform: translateX(2px); /* ahora empuja hacia la derecha */
+}
+
 
 /* ================= RESPONSIVE ================= */
 
