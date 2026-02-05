@@ -12,5 +12,5 @@ async function loadPartial(id, url) {
   el.innerHTML = await res.text();
 }
 
-loadPartial("site-header", `${BASE}/partials/header.html`);
-loadPartial("site-footer", `${BASE}/partials/footer.html`);
+loadPartial("site-header", `/partials/header.html`);
+loadPartial("site-footer", `/partials/footer.html`);
